@@ -69,3 +69,5 @@ end
 add a bunch of cats to an array and list their names
 cats.each { |cat| puts "#{cat.name}"}
 (good time to point out that .each returns original array)
+
+add an `all` method, explain class variables/methods and `self`
