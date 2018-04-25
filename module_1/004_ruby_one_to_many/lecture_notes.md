@@ -34,4 +34,25 @@
 
  		Tweets
 
- 	Single Source of Entry - run.rb
+ 	Single Source of Entry
+ 	run.rb
+ 	tweet.rb
+ 	user.rb
+ 
+ 	require_relative "./tweet.rb"
+	require_relative "./user.rb"
+
+	Show coffee dad twitter.com/coffee_dad
+
+	User gets initialized with a name (read_only)
+
+	Tweet gets message (attr_accessor) and user (attr_reader)
+	define user_name method
+
+	instantiate user and a few tweets in run.rb
+
+	What happens if Coffee Dad changes his name?  If we use objects, we're good.  Single Source of Truth means there's only one place to get a user's name.  Demonstrate.
+
+	Build the rest of the deliverables
+
+	Makes more sense for a tweet to remember its user than a user to remember all their tweets

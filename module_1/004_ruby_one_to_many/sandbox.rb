@@ -8,7 +8,7 @@ class School
 	end
 
 	def add_instructor(name)
-		@instructors << name
+		self.instructors << name
 	end
 end
 
@@ -18,7 +18,7 @@ flatiron = School.new(name="Flatiron")
 puts flatiron.name
 
 flatiron.add_instructor("Paul")
-flatiron.add_instructor("Niki")
+flatiron.add_instructor("Niky")
 flatiron.add_instructor("Nicole")
 
 puts flatiron.instructors
