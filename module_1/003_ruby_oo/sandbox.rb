@@ -20,6 +20,10 @@ class Cat
 	def friends_with(cat)
 		puts "#{@name} is best friends with #{cat.name}"
 	end
+
+	def self.cats_with_color(color)
+		@@all.map {|cat| cat.name if cat.color == color}.compact
+	end
 end
 
 

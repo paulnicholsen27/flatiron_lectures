@@ -71,3 +71,9 @@ cats.each { |cat| puts "#{cat.name}"}
 (good time to point out that .each returns original array)
 
 add an `all` method, explain class variables/methods and `self`
+
+add a get by color method using select, which returns array of cat objects
+
+extend it to use map to just get names
+
+```@@all.map {|cat| cat.name if cat.color == color}.compact```
