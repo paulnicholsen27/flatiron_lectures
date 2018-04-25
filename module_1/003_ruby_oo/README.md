@@ -3,7 +3,7 @@
 - customized
 
 Set up a hash of a cat
-cat = {"name": "Ella", "color": "black", "species": "cat"} 
+cat = {"name": "Ella", "color": "black", "species": "feline"} 
 how do we access some of the attributes?
 cat["name"]
 
@@ -69,6 +69,10 @@ end
 add a bunch of cats to an array and list their names
 cats.each { |cat| puts "#{cat.name}"}
 (good time to point out that .each returns original array)
+
+def friends_with(cat)
+	puts "#{@name} is best friends with #{cat.name}"
+end
 
 add an `all` method, explain class variables/methods and `self`
 
