@@ -1,7 +1,6 @@
 class Tweet
 
-	attr_accessor :message
-	attr_reader :user
+	attr_reader :message, :user, :all
 
 	@@all = []
 
@@ -12,10 +11,12 @@ class Tweet
 	end
 
 	def username
-		user.name
+		self.user.username
 	end
 
 	def self.all
+		# returns all tweets from all users
 		@@all
 	end
+
 end

@@ -1,6 +1,9 @@
+require 'pry'
+
 class School
 
 	attr_accessor :name, :instructors
+
 
 	def initialize(name)
 		@name = name
@@ -10,17 +13,21 @@ class School
 	def add_instructor(name)
 		self.instructors << name
 	end
+
 end
 
-
 flatiron = School.new(name="Flatiron")
+paul = Instructor.new()
+niky = Instructor.new()
+nicole = Instructor.new()
+flatiron.add_instructor(niky)
+flatiron.add_instructor(paul)
+flatiron.add_instructor(nicole)
 
-puts flatiron.name
+paul.School
+#flatiron
 
-flatiron.add_instructor("Paul")
-flatiron.add_instructor("Niky")
-flatiron.add_instructor("Nicole")
-
-puts flatiron.instructors
-
-flatiron.instructors.map { |instructor| instructor.favorite_food }
+flatiron.instructors
+[]
+binding.pry
+puts 'done'

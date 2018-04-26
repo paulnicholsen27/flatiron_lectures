@@ -1,25 +1,17 @@
 class User
 
-	attr_accessor :name
+	attr_accessor :username
 
-	@@all = []
-
-	def initialize(name)
-		@name = name
-		@@all << self
-	end
-
-	def self.all
-		@@all
-	end
-	
-	def tweets
-		Tweet.all.select{|tweet| tweet.user == self}
+	def initialize(username)
+		@username = username
 	end
 
 	def post_tweet(message)
 		Tweet.new(message, self)
 	end
-	
-end
 
+	def tweets
+		Tweet.all.select {|tweet| tweet.user == self}
+	end
+
+end
