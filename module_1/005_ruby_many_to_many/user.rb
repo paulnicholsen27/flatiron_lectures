@@ -23,9 +23,6 @@ class User
 		end
 	end
 
-	def favorite_exists?(tweet, user)
-		
-
 	def liked_tweets
 		Favorite.all.select {|favorite| favorite.user == self}
 	end
