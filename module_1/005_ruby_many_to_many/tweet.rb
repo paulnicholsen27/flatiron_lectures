@@ -19,4 +19,8 @@ class Tweet
 		@@all
 	end
 
+	def likers
+		Favorite.all.select{|favorite| favorite.tweet == self}
+	end
+
 end
