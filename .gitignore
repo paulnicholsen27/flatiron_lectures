@@ -50,3 +50,5 @@ build-iPhoneSimulator/
 .rvmrc
 
 .byebug_history
+.mp4
+.screenflow
