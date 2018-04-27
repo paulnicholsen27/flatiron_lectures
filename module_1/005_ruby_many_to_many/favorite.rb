@@ -5,23 +5,31 @@ class Favorite
 	@@all = []
 
 	def initialize(user, tweet)
-		if already_exists?(user, tweet)
-			return "User has already favorited this Tweet"
-		end
-		@user, @tweet = user, tweet
-		@@all << self
-	end
-
-	def already_exists?(user, tweet)
-		favorite = @@all.select{|favorite| favorite.user == user && favorite.tweet == tweet}
-		if favorite
-			true
+		if self.already_exist?(user, tweet)
+			return "You've already favorited that"
 		else
-			false
+			@user, @tweet = user, tweet
+			@@all << self
 		end
 	end
 
-	def self.all
+	def already_exist?(user, tweet)
+		# returns true/false if favorite linking tweet and user already exists
+		already_exist = @@all.find{|favorite| favorite.user == user && favorite.tweet == tweet}
+		if already_exist
+			return true
+		else
+			return false
+		end
+	end
+
+	def self.all 
 		@@all
 	end
+
+	def delete_favorite
+		#removes favorite from @@all array
+		@@all.delete(self)
+	end
+	
 end

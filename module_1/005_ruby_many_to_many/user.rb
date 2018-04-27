@@ -4,6 +4,7 @@ class User
 
 	def initialize(username)
 		@username = username
+
 	end
 
 	def post_tweet(message)
@@ -15,15 +16,25 @@ class User
 	end
 
 	def like_tweet(tweet)
-	# creates a Favorite instance linking Tweet and User
+	# create instance of Favorite linking User & Tweet
 		if tweet.user == self
-			puts "You can't like your own Tweet!"
+			"You can't like your own tweet, jerk."
 		else
 			Favorite.new(self, tweet)
 		end
 	end
 
 	def liked_tweets
-		Favorite.all.select {|favorite| favorite.user == self}
+	# return all tweets user has liked
+		user_favorites = Favorite.all.select{|favorite| favorite.user == self}
+		favorite_tweets = user_favorites.collect{|favorite| favorite.tweet}
 	end
+
+	def unlike_tweet(tweet)
+		# deletes favorite
+		favorite_to_destroy = Favorite.all.find {|favorite| favorite.user == self && favorite.tweet == tweet}
+		favorite_to_destroy.delete_favorite
+	end
+
+
 end

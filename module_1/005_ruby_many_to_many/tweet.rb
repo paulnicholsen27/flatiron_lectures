@@ -20,7 +20,8 @@ class Tweet
 	end
 
 	def likers
-		Favorite.all.select{|favorite| favorite.tweet == self}
+	#returns all Users who have liked this tweet
+		Favorite.all.select{|favorite| favorite.tweet == self}.collect{|favorite| favorite.user}
 	end
 
 end
