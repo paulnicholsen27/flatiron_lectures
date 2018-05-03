@@ -10,3 +10,11 @@ task :console do
 	require_relative "environment.rb"
 	Pry.start
 end
+
+require "sinatra/activerecord/rake"
+
+namespace :db do
+	task :load_config do
+		require "sinatra/activerecord"
+	end
+end
