@@ -4,3 +4,9 @@ desc 'Print Hello World'
 task :hello do 
 	puts "Hello World"
 end
+
+desc "Runs a console"
+task :console do
+	require_relative "environment.rb"
+	Pry.start
+end

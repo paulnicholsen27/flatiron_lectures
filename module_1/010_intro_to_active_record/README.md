@@ -24,5 +24,9 @@
 
 ## Migrations
 
+- change the structure (schema) of the database
+- create table, add column, delete column, etc.
+- name of class must match name of file
+- migrations are run in alphabetical order, so prepend an order number or a datestamp
 ## Seed data
 

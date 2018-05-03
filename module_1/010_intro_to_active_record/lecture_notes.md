@@ -28,3 +28,55 @@ get active record
 
 connect to database
 	- in environment file
+	old way:
+	```
+	require 'sqlite3'
+	require 'require_all'
+	require_all 'lib'
+
+	# setting up the database connection (old way)
+	DB = SQLite3::Database.new("chinook.db")
+	```
+
+	new way:
+	```
+	ActiveRecord::Base.establish_connection({
+	adapter: 'sqlite3',
+	database: 'test.db', 
+})
+	```
+
+Test.db doesn't exist, so what will happen?
+
+desc "Runs a console"
+task :console do
+	require_relative "environment.rb"
+	pry.start
+end
+
+ActiveRecord::Base.connection - shows some of the conneciton stuff.
+
+ActiveRecord::Base
+	- class within AR
+	- used to establish connection
+	- in labs used to access methods we've been writing in SQL
+
+make a db folder and put dbs in there.  make sub directory migrations
+
+Rake -T has not added any extra tasks as expected
+http://api.rubyonrails.org/classes/ActiveRecord/Tasks/DatabaseTasks.html  [INCOMPLETE]
+
+Make a migration
+	up/down vs change
+
+```
+class CreateArtists < ActiveRecord::Migration
+
+	def change
+		create_table :artists do |t|
+			t.string :name
+		end
+	end
+
+end
+```
