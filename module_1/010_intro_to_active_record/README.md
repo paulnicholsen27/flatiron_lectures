@@ -11,24 +11,18 @@
 
 ## Rake
 
+* add the rake gem to the Gemfile
+* bundle install (get the gem)
+* define tasks in the Rakefile
+
 
 ## ActiveRecord
-
-* create table
-* updating schema
-* interacting with the database
-* methods created automatically
+- create table
+- update schema
+- interact with database
+- lots of automatic stuff
 
 ## Migrations
 
-* Change the structure of the database
-* Affect the schema
-
-Create table
-Drop table
-Alter table (adding indexes and constraints)
-Add column
-
 ## Seed data
 
-* Seed data for the database

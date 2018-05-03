@@ -1,7 +1,6 @@
-require_relative './config/environment'
-require 'sinatra/activerecord/rake'
+# Tasks for managing our project
 
-desc "Start our app console"
-task :console do
-  Pry.start
+desc 'Print Hello World'
+task :hello do 
+	puts "Hello World"
 end
