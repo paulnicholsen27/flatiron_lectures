@@ -1,11 +1,8 @@
-require 'bundler/setup'
-Bundler.require
+require 'sqlite3'
+require 'require_all'
+require 'active_record'
+require 'pry'
+require 'sinatra/activerecord'
+require_all 'lib'
 
-ActiveRecord::Base.establish_connection(
-  adapter: 'sqlite3',
-  database: "db/development.sqlite"
-)
-
-ActiveRecord::Base.logger = Logger.new(STDOUT)
-
-require_all 'app'
+ActiveRecord::Base.establish_connection :development

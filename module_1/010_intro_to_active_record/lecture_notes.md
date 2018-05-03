@@ -80,3 +80,15 @@ class CreateArtists < ActiveRecord::Migration
 
 end
 ```
+
+in rake console
+	migration = CreateArtists.new
+	ls migration to show some methods
+	migration.change to execute
+
+sqlite3 db/test.db
+.tables
+.schema artists
+
+add a column
+
