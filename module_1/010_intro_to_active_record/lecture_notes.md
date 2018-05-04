@@ -61,7 +61,7 @@ ActiveRecord::Base
 	- used to establish connection
 	- in labs used to access methods we've been writing in SQL
 
-make a db folder and put dbs in there.  make sub directory migrations
+make a db folder and put dbs in there.  make sub directory migrate
 
 Rake -T has not added any extra tasks as expected
 http://api.rubyonrails.org/classes/ActiveRecord/Tasks/DatabaseTasks.html  
@@ -91,7 +91,7 @@ config/environment.rb
 
 	require_all 'lib'
 
-	
+
 Make a migration
 	up/down vs change
 
