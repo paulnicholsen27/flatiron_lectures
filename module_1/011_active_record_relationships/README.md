@@ -9,7 +9,14 @@
 
 ## Models
 
-Core business logic of our application
+Artist has many Songs through Albums
+Song belongs to Artist through Albums
+Artist has many Albums
+Album belongs to Artist
+Genre has many Songs
+Song belongs to Genre
+Artist has many Genres through Songs
+Genre has many Artists through Songs
 
 ## ActiveRecord Base methods
 
